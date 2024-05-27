@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!---LA IDE PRINCIPAL DEL JUEGO FUE BASARME EN UN ÁREA DE COCINA
+    DONDE LO NORMAL ES COCINAR CON LOS INGREDIENTES CORRECTOS, Y DE AHÍ PARTÍ CON LA IDEA
+    DE UNA SELECCIÓN DE INGREDIENTES CORRECTOS Y EVITAR INGREDIENTES ERRONEOS (EN ESTE CASO BASURA O COMIDA DESPERDICIADA)
+    ASÍ AL SELECCIONAR EL ALIMENTO CORRECTO SE BONIFICA LA PUNTUACIÓN, Y AL COMETER EL ERROR DE USAR UNO INCORRECTO
+    SE PENALIZARIA. 
+    LA IDEA DE AGREGAR UN INGREDIENTE QUE VALIERA MÁS PUNTOS FUE UNICAMENTE PARA AGREGAR UNA MECANICA AL JUEGO
+
+
+    APARTE DE QUE LO PENSÉ CON UNA AMIGA QUE ESTUDIO ALIMENTOS Y ESTABAMOS EN UN RESTAURANTE... ESO AYUDO MUCHO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            height: 50px;
+            vertical-align: middle;
+        }
+        main {
+            flex: 1;
+            position: relative;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        canvas {
+            display: block;
+        }
+        #playButton {
+            position: absolute;
+            top: 400px;
+            left: 600px;
+            padding: 10px 20px;
+            font-size: 100px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .description-box {
+            position: absolute;
+            top: 100px; /* Ajustar según la posición del marcador */
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            z-index: 1;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ninja Cheff</h1>
+        <img src="images/logo.png" alt="Logo del videojuego">
+    </header>
+    <main>
+        <div id="descriptionBox" class="description-box">
+            <h2>Descripción del Juego</h2>
+            <p>En este juego, tu objetivo es recolectar la mayor cantidad de comida posible mientras  evitas la basura. Usa el mouse para interactuar y ver tu puntuación subir. La comida
+                con circulos azules te sumará un punto, mientras que la basura en circulos negros te restará. PERO MUCHO OJO 
+                Podría aparecer comida en circulos amarillos, esa comida te sumara el triple de puntos. ¡Buena suerte!</p>
+        </div>
+        <button id="playButton">Play</button>
+        <canvas id="canvas"></canvas>
+    </main>
+    <footer>
+        <p>© 2024 Ninja Cheff. Todos los derechos reservados a JORGE BRANDON VAZQUEZ MARTINEZ.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
